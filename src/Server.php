@@ -761,7 +761,7 @@ abstract class Server implements ServerInterface
             $this->pidMap['masterPid']  = $masterPID;
             $this->pidMap['managerPid'] = $managerPID;
 
-            return $masterPID > 0 && Process::kill($masterPID, 0);
+            return $masterPID > 1 && Process::kill($masterPID, 0);
         }
 
         return false;
